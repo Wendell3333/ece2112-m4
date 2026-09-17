@@ -56,6 +56,19 @@ This code groups people with similar elements, computes their averages, and retu
 
     fig, axes = plt.subplots(1, 3, figsize=(15, 5))
 
-This creates a blank figure with a 1-by-3 layout, sized 15 in width and 5 in height, holding 3 plots. fig being the name of the figure itself, axes in an array that stores the individual plots, plt.subplots() is a sepcific
+This creates a blank figure with a 1-by-3 layout, sized 15 in width and 5 in height, holding 3 plots. fig is the name of the figure itself; axes is an array that stores the individual plots; plt.subplots() is a specific matplotlib function that creates the figure, (1, 3) represents the grid layout on, and figsize = (15, 5) is the dimensional size.
+
+        meanTrack.plot(kind='bar', ax=axes[0], color='blue')
+
+This code plots the meanTrack data as a bar graph and assigns it to axes[0], with the bar colors set to blue.
+
+        axes[0].set_title('Mean Average by Track')
+        axes[0].tick_params(axis='x', rotation=45)
+
+This code sets titles for the bar graph and adjusts the x-axis angles of the elements 'Communication', 'Instrument', and 'Microelectronics' to avoid text overlap. repeats this again for the two other datapoints meanGender for axes[1] and meanHometown for axes[2].
+
+        axes[0].set_ylabel('Mean Average')
+
+This code creates a label on the left side of the axes[0]. Since all of the graphs' data is the 'Mean Average', it only needs to be initialized once.
 
     
